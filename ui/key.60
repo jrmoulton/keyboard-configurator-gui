@@ -1,0 +1,14 @@
+
+export Key := TouchArea {
+    has-hover: true;
+    property <string> id;
+    property <int> pos;
+    property <int> num-elements;
+    Rectangle { 
+        // x: parent.width / (2 * num-elements) * ( 1 + 2 * pos) - ( width / 2 );
+        width: height;
+        border-radius: 15px;
+        height: 60px;
+        background: #BBBBBB;
+    }
+}

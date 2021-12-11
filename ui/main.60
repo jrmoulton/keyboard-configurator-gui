@@ -1,0 +1,57 @@
+
+import { KeyRow } from "key_row.60";
+import { Button } from "sixtyfps_widgets.60";
+
+Configurator := Window {
+    property <string> font;
+    property <length> cust-font-size;
+    property <int> num-rows;
+    property <length> key-height;
+    num-rows: 6;
+    key-height: 60px;
+    font: "SF Pro";
+    cust-font-size: 20px;
+    min-height: 500px;
+    min-width: 1000px;
+    preferred-height: 550px;
+    preferred-width: 1300px;
+    keyboard-type := Text { 
+        x: parent.width / 2 - width / 2;
+        y: 20px;
+        text: "Launch Keyboard (launch_1)";
+        font-size: cust-font-size;
+        font-family: font;
+    }
+    VerticalLayout {
+    y: 50px;
+    spacing: 5px;
+    property <int> num-rows;
+    num-rows: root.num-rows;
+    height: num-rows * (root.key-height + 5px);
+    // background: #000000;
+    KeyRow { row-pos: 0; num-rows: parent.num-rows; }
+    KeyRow { row-pos: 1; num-rows: parent.num-rows; }
+    KeyRow { row-pos: 2; num-rows: parent.num-rows; }
+    KeyRow { row-pos: 3; num-rows: parent.num-rows;}
+    KeyRow { row-pos: 4; num-rows: parent.num-rows;}
+    KeyRow { row-pos: 5; num-rows: parent.num-rows;}
+    }
+    Button { 
+        // border-color: #FFFFFF;
+        // border-width: 1px;
+        height: 30px;
+        width: 200px;
+        y: (1 + num-rows) * key-height + 30px;
+        text: "Configure Keyboard"; 
+        x: parent.width / 2 - width / 2;
+    }
+     
+    // TouchArea { 
+    //     Text {
+    //         x: parent.width / 2 - width/2;
+    //         y: parent.height / 2 - height/2;
+    //         text: "Hey Heidi! This is awesome!"; 
+    //         font-size: parent.width * 0.05;
+    //     }
+    // }
+}

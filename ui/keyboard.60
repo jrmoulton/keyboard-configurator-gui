@@ -1,0 +1,18 @@
+
+import { Key } from "key.60";
+
+Blank := Rectangle {
+ width: 0px;
+ height: 0px;
+}
+
+Keyboard := Rectangle {
+    Key {  }
+    Key {  }
+    Key {  }
+    Key {  }
+    Key {  }
+    Key {  }
+    Key {  }
+    Key {  }
+}

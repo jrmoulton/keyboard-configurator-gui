@@ -292,7 +292,7 @@ checksum = "3d7b894f5411737b7867f4827955924d7c254fc9f4d91a6aad6b097804b1018b"
 [[package]]
 name = "const-field-offset"
 version = "0.1.2"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "const-field-offset-macro",
  "field-offset",
@@ -301,7 +301,7 @@ dependencies = [
 [[package]]
 name = "const-field-offset-macro"
 version = "0.1.2"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1207,6 +1207,7 @@ dependencies = [
 name = "keyboard-configurator-gui"
 version = "0.1.0"
 dependencies = [
+ "serde",
  "sixtyfps",
  "sixtyfps-build",
 ]
@@ -1240,9 +1241,9 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "libc"
-version = "0.2.109"
+version = "0.2.111"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f98a04dce437184842841303488f70d0188c5f51437d2a834dc097eafa909a01"
+checksum = "8e167738f1866a7ec625567bae89ca0d44477232a4f7c52b1c7f2adc2c98804f"
 
 [[package]]
 name = "libloading"
@@ -1723,9 +1724,9 @@ checksum = "b330c9d1b92dfe68442ca20b009c717d5f0b1e3cf4965e62f704c3c6e95a1305"
 
 [[package]]
 name = "pkg-config"
-version = "0.3.23"
+version = "0.3.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d1a3ea4f0dd7f1f3e512cf97bf100819aa547f36a6eccac8dbaae839eb92363e"
+checksum = "58893f751c9b0412871a09abd62ecd2a00298c6c83befa223ef98c52aef40cbe"
 
 [[package]]
 name = "png"
@@ -2103,6 +2104,20 @@ name = "serde"
 version = "1.0.131"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b4ad69dfbd3e45369132cc64e6748c2d65cdfb001a2b1c232d128b4ad60561c1"
+dependencies = [
+ "serde_derive",
+]
+
+[[package]]
+name = "serde_derive"
+version = "1.0.131"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b710a83c4e0dff6a3d511946b95274ad9ca9e5d3ae497b63fda866ac955358d2"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
 
 [[package]]
 name = "servo-fontconfig"
@@ -2168,7 +2183,7 @@ checksum = "533494a8f9b724d33625ab53c6c4800f7cc445895924a8ef649222dcb76e938b"
 [[package]]
 name = "sixtyfps"
 version = "0.1.6"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "const-field-offset",
  "once_cell",
@@ -2182,7 +2197,7 @@ dependencies = [
 [[package]]
 name = "sixtyfps-build"
 version = "0.1.6"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "sixtyfps-compilerlib",
  "spin_on",
@@ -2192,7 +2207,7 @@ dependencies = [
 [[package]]
 name = "sixtyfps-compilerlib"
 version = "0.1.6"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "by_address",
  "codemap",
@@ -2221,7 +2236,7 @@ dependencies = [
 [[package]]
 name = "sixtyfps-corelib"
 version = "0.1.6"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "atomic-polyfill",
  "auto_enums",
@@ -2253,7 +2268,7 @@ dependencies = [
 [[package]]
 name = "sixtyfps-corelib-macros"
 version = "0.1.6"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "quote",
  "syn",
@@ -2262,7 +2277,7 @@ dependencies = [
 [[package]]
 name = "sixtyfps-macros"
 version = "0.1.6"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -2273,7 +2288,7 @@ dependencies = [
 [[package]]
 name = "sixtyfps-rendering-backend-default"
 version = "0.1.6"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "cfg-if 1.0.0",
  "sixtyfps-corelib",
@@ -2284,7 +2299,7 @@ dependencies = [
 [[package]]
 name = "sixtyfps-rendering-backend-gl"
 version = "0.1.6"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "by_address",
  "cfg-if 1.0.0",
@@ -2324,7 +2339,7 @@ dependencies = [
 [[package]]
 name = "sixtyfps-rendering-backend-qt"
 version = "0.1.6"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "const-field-offset",
  "cpp",
@@ -2680,7 +2695,7 @@ dependencies = [
 [[package]]
 name = "vtable"
 version = "0.1.5"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "atomic-polyfill",
  "const-field-offset",
@@ -2691,7 +2706,7 @@ dependencies = [
 [[package]]
 name = "vtable-macro"
 version = "0.1.5"
-source = "git+https://github.com/sixtyfpsui/sixtyfps/#d1ae109296de6068911d852dc5fe2fc9155f41e5"
+source = "git+https://github.com/sixtyfpsui/sixtyfps/#2a44afebb2ad07e1e92774c56d77323aa2421c0b"
 dependencies = [
  "proc-macro2",
  "quote",

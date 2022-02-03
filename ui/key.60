@@ -1,14 +1,25 @@
 
 export Key := TouchArea {
     has-hover: true;
+    mouse-cursor: edit-mode ? pointer : default;
+    property <bool> edit-mode;
     property <string> id;
     property <int> pos;
     property <int> num-elements;
+    property <bool> med;
+    property <bool> large;
+    property <length> small-size;
+    property <length> med-size;
+    property <length> large-size;
+    small-size: 60px;
+    med-size: small-size / 2 * 3.5; // My approximations of relative size
+    large-size: small-size / 2 * 4.5;
+
     Rectangle { 
         // x: parent.width / (2 * num-elements) * ( 1 + 2 * pos) - ( width / 2 );
-        width: height;
+        width: large ? large-size : med ? med-size : small-size;
         border-radius: 15px;
-        height: 60px;
+        height: small-size;
         background: #BBBBBB;
     }
 }

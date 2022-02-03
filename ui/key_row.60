@@ -2,32 +2,31 @@
 import { Key } from "key.60";
 
 export KeyRow := Rectangle {
-    property <int> row-pos;
-    property <int> num-rows;
     HorizontalLayout { // This Rectangle exists just to fill its parent's width:  
     // so that the inner width can access a width outside this widget;
     property <int> num-elements;
     num-elements: 15;
     x: parent.width / 2 - width / 2;
     // y: parent.height / (2 * num-rows) * ( 1 + 2 * row-pos) - ( height / 2 );
-    width: num-elements * (60px + 5px);
+    width: num-elements * (60px + 5px); // This would need to be kept track of 
+    // and set in rust
     height: 60px;
     spacing: 5px;
     // background: #000000;
-    Key { pos: 0; num-elements: parent.num-elements; }
-    Key { pos: 1; num-elements: parent.num-elements; }
-    Key { pos: 2; num-elements: parent.num-elements; }
-    Key { pos: 3; num-elements: parent.num-elements; }
-    Key { pos: 4; num-elements: parent.num-elements; }
-    Key { pos: 5; num-elements: parent.num-elements; }
-    Key { pos: 6; num-elements: parent.num-elements; }
-    Key { pos: 7; num-elements: parent.num-elements; }
-    Key { pos: 8; num-elements: parent.num-elements; }
-    Key { pos: 9; num-elements: parent.num-elements; }
-    Key { pos: 10; num-elements: parent.num-elements; }
-    Key { pos: 11; num-elements: parent.num-elements; }
-    Key { pos: 12; num-elements: parent.num-elements; }
-    Key { pos: 13; num-elements: parent.num-elements; }
-    Key { pos: 14; num-elements: parent.num-elements; }
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
+    Key {}
     }
 }
